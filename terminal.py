@@ -1,35 +1,30 @@
-# Main terminal
+### Main terminal
 from terminal_command import *
 from matrix import InputMatrix
-# import numpy as np
 
-# try to modulairze this.
-# m = InputMatrix("data.txt")
-# rowsize = len(m)
-# colsize = len(m[0])
-
-# working on seeing how to move this out of here without it crashing
-# because of circular imports.
-
-
-# lookups the right command and triggers it.
+# lookups the command and triggers it.
 def command_lookup(arg):
 	if arg == "exit":
 		shell_exit()
-	if arg[:5] == "matrix":
+	elif arg[:6] == "matrix":
 		global m
 		m = shell_matrix(arg[6:])
 		print(m)
-	if arg == "view":
+	elif arg == "view":
 		shell_view(m)
+	elif arg[:4] == "test":
+		shell_test(arg[5:])
 
 
+# Main Loop
+counter = 1 
 while True:
-	args = input("> ")
+	args = input("[%i] "  % counter)
 	if args == "":
 		continue
 	else:
 		command_lookup(args)
+	counter += 1
 
 
 

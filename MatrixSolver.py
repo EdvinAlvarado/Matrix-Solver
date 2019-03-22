@@ -1,3 +1,5 @@
+### LEGACY PROGRAM. FULLY REMADE.
+
 # Makes a nxn matrix from the data file.
 def InputMatrix(txt):
 	f = open(txt, "r")

@@ -1,3 +1,5 @@
+### Can't import them directly from MatrixSolver as it runs the code in the file.
+
 def InputMatrix(txt):
 	f = open(txt, "r")
 	m = []
