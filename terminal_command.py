@@ -1,11 +1,11 @@
 from matrix import InputMatrix
-import terminal
+import numpy as np
 
 def shell_exit():
 	exit()
 
 def shell_matrix(arg):
-	return InputMatrix(arg)
+	return np.array(InputMatrix(arg))
 
-def shell_view():
-	print(terminal.m)
+def shell_view(arg):
+	print(arg)
