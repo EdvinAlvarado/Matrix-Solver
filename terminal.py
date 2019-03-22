@@ -8,13 +8,17 @@ def command_lookup(arg):
 		shell_exit()
 	elif arg[:6] == "matrix":
 		global m
-		m = shell_matrix(arg[6:])
+		m = shell_matrix(arg[7:])
 		print(m)
 	elif arg == "view":
 		shell_view(m)
 	elif arg[:4] == "test":
 		shell_test(arg[5:])
-
+	elif arg[:5] == "rowop":
+		rowop(arg[6:])
+	elif arg[:7] == "rowmult":
+		rowmult(arg[8:])
+	MatrixChecker(m)
 
 # Main Loop
 counter = 1 
