@@ -18,5 +18,5 @@ def InputMatrix(txt):
 def MatrixPrinter(matrix):
 	i = 0
 	for row in matrix:
-		print("%s %i" %(row, i))
+		print("%s %i" % (row, i))
 		i += 1

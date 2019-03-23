@@ -117,7 +117,7 @@ print("\n")
 # Prints the resulting constants.
 i = 0
 for row in m:
-	print("c%i %s" %(i, row[colsize-1]))
+	print("c%i %s" % (i, row[colsize-1]))
 	i += 1
 # Checks if correct matrix has been solved correctly
 if m[0][0] == 1 and m[1][1] == 1 and m[0][1] == 0 and m[1][0] == 0:

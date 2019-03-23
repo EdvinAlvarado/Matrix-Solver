@@ -14,25 +14,41 @@ def shell_view(arg):
 def shell_test(arg):
 	print(arg)
 
-def rowop(arg):
+def rowop(arg, matrix, rowsize):
 	lst = arg.split(" ", 2)
 	try:
-		rowchanged = lst[0]
-		rowoperator = lst[1]
-		n = lst[2]
+		rowchanged = int(lst[0])
+		rowoperator = int(lst[1])
+		n = int(lst[2])
 	except IndexError:
-		print("missing input.")
-	return m[rowoperator] += n * m[rowchanged]
+		print("Too little or many variables.")
+	except ValueError:
+		print("Wrong variables.")
 
-def rowmult(arg):
+	try:
+		matrix[rowchanged] += n * matrix[rowoperator]
+	except IndexError:
+		print("Rows outside matrix.")
+
+def rowmult(arg, matrix, rowsize):
 	lst = arg.split(" ", 1)
 	try:
-		rowchanged = lst[0]
-		n = lst[1]
+		rowchanged = int(lst[0])
+		n = int(lst[1])
 	except IndexError:
-		print("missing input.")
-	return m[rowoperator] = m[rowoperator] * n
+		print("Too little or many variables.")
+	except ValueError:
+		print("Wrong variables.")
+
+	try:
+		matrix[rowchanged] = matrix[rowchanged] * n
+	except IndexError:
+		print("Rows outside matrix.")
 
 def MatrixChecker(matrix):
-	print("COMING SOON")
+	if matrix[0][0] == 1 and matrix[1][1] == 1 and matrix[0][1] == 0 and matrix[1][0] == 0:
+		print("###CORRECT CONSTANTS###")
+	else:
+		print("###INCORRECT CONSTANTS###")
+
 # Probably amke it a True or False, so in every loop it verify if the matrix has been solved. once solved it would automatically yell solved.
