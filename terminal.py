@@ -30,6 +30,7 @@ def command_lookup(arg):
 		MatrixChecker(m)
 	else:
 		print("Unknown Command")
+	print("\n")
 
 
 # Main Loop
@@ -38,6 +39,7 @@ while True:
 	args = input("[%i] " % counter)
 	counter += 1
 	if args == "":
+		print("\n")
 		continue
 	else:
 		command_lookup(args)
