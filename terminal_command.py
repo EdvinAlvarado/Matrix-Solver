@@ -11,8 +11,8 @@ def shell_matrix(arg):
 def shell_view(arg):
 	print(arg)
 
-def shell_test(arg):
-	print(arg)
+# def shell_test(arg):
+# 	print(arg)
 
 def rowop(arg, matrix, rowsize):
 	lst = arg.split(" ", 2)
@@ -45,10 +45,13 @@ def rowmult(arg, matrix, rowsize):
 	except IndexError:
 		print("Rows outside matrix.")
 
+# Next Project would be to create a matrix checker that could work with infinite size matrixes. Probably by taking the shape of the matrix and then repeating a pattern.
 def MatrixChecker(matrix):
-	if matrix[0][0] == 1 and matrix[1][1] == 1 and matrix[0][1] == 0 and matrix[1][0] == 0:
+	i = np.identity(matrix.shape[0])
+	A = matrix[:, :len(matrix)]
+	test_matrix = (A == i)
+	if sum(test_matrix.shape) == test_matrix.sum():
 		print("###CORRECT CONSTANTS###")
 	else:
 		print("###INCORRECT CONSTANTS###")
 
-# Probably amke it a True or False, so in every loop it verify if the matrix has been solved. once solved it would automatically yell solved.

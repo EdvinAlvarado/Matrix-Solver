@@ -43,4 +43,3 @@ while True:
 		continue
 	else:
 		command_lookup(args)
-	
