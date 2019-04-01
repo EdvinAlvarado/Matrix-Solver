@@ -50,7 +50,7 @@ def MatrixChecker(matrix):
 	i = np.identity(matrix.shape[0])
 	A = matrix[:, :len(matrix)]
 	test_matrix = (A == i)
-	if sum(test_matrix.shape) == test_matrix.sum():
+	if np.prod(test_matrix.shape) == test_matrix.sum():
 		print("###CORRECT CONSTANTS###")
 	else:
 		print("###INCORRECT CONSTANTS###")
