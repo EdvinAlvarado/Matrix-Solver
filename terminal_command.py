@@ -14,7 +14,7 @@ def shell_view(arg):
 # def shell_test(arg):
 # 	print(arg)
 
-def rowop(arg, matrix, rowsize):
+def rowop(arg, matrix):
 	lst = arg.split(" ", 2)
 	try:
 		rowchanged = int(lst[0])
@@ -30,7 +30,7 @@ def rowop(arg, matrix, rowsize):
 	except IndexError:
 		print("Rows outside matrix.")
 
-def rowmult(arg, matrix, rowsize):
+def rowmult(arg, matrix):
 	lst = arg.split(" ", 1)
 	try:
 		rowchanged = int(lst[0])

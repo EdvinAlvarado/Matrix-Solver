@@ -21,11 +21,11 @@ def command_lookup(arg):
 	# elif arg[:4] == "test":
 	# 	shell_test(arg[5:])
 	elif arg[:5] == "rowop":
-		rowop(arg[6:], m, rowsize)
+		rowop(arg[6:], m)
 		shell_view(m)
 		MatrixChecker(m)
 	elif arg[:7] == "rowmult":
-		rowmult(arg[8:], m, rowsize)
+		rowmult(arg[8:], m)
 		shell_view(m)
 		MatrixChecker(m)
 	else:
